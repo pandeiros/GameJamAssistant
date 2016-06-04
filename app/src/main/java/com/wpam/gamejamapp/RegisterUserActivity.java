@@ -44,8 +44,7 @@ public class RegisterUserActivity extends FragmentActivity {
 
 //        findViewById(R.id.layout_progress_dots).setVisibility(View.VISIBLE);
 
-        ImageView dot = (ImageView) findViewById(R.id.progress_dot1);
-        dot.setColorFilter(ContextCompat.getColor(this, R.color.primary_light), PorterDuff.Mode.SRC_IN);
+        switchProgressDotColor(R.id.progress_dot1, R.id.progress_dot2);
 
         Button btn = (Button) findViewById(R.id.progress_next);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +53,14 @@ public class RegisterUserActivity extends FragmentActivity {
                 showRegisterTagsForm();
             }
         });
+    }
+
+    private void switchProgressDotColor(int active, int inactive) {
+        ImageView dot = (ImageView) findViewById(active);
+        dot.setColorFilter(ContextCompat.getColor(this, R.color.accent_light), PorterDuff.Mode.SRC_IN);
+
+        dot = (ImageView) findViewById(inactive);
+        dot.setColorFilter(ContextCompat.getColor(this, R.color.progress_dot_normal), PorterDuff.Mode.SRC_IN);
     }
 
 //    public void showRegisterRoleForm() {
@@ -116,11 +123,7 @@ public class RegisterUserActivity extends FragmentActivity {
             transaction.commit();
         }
 
-        ImageView dot = (ImageView) findViewById(R.id.progress_dot1);
-        dot.setColorFilter(ContextCompat.getColor(this, R.color.secondary_text), PorterDuff.Mode.SRC_IN);
-
-        dot = (ImageView) findViewById(R.id.progress_dot2);
-        dot.setColorFilter(ContextCompat.getColor(this, R.color.primary_light), PorterDuff.Mode.SRC_IN);
+        switchProgressDotColor(R.id.progress_dot2, R.id.progress_dot1);
 
         Button btn = (Button) findViewById(R.id.progress_next);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -160,11 +163,7 @@ public class RegisterUserActivity extends FragmentActivity {
             transaction.commit();
         }
 
-        ImageView dot = (ImageView) findViewById(R.id.progress_dot2);
-        dot.setColorFilter(ContextCompat.getColor(this, R.color.secondary_text), PorterDuff.Mode.SRC_IN);
-
-        dot = (ImageView) findViewById(R.id.progress_dot3);
-        dot.setColorFilter(ContextCompat.getColor(this, R.color.primary_light), PorterDuff.Mode.SRC_IN);
+        switchProgressDotColor(R.id.progress_dot3, R.id.progress_dot2);
 
         Button btn = (Button) findViewById(R.id.progress_next);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -184,11 +183,7 @@ public class RegisterUserActivity extends FragmentActivity {
         super.onBackPressed();
         if (currentFragment == 1)
         {
-            ImageView dot = (ImageView) findViewById(R.id.progress_dot1);
-            dot.setColorFilter(ContextCompat.getColor(this, R.color.primary_light), PorterDuff.Mode.SRC_IN);
-
-            dot = (ImageView) findViewById(R.id.progress_dot2);
-            dot.setColorFilter(ContextCompat.getColor(this, R.color.secondary_text), PorterDuff.Mode.SRC_IN);
+            switchProgressDotColor(R.id.progress_dot1, R.id.progress_dot2);
 
             Button btn = (Button) findViewById(R.id.progress_next);
             btn.setOnClickListener(new View.OnClickListener() {
@@ -202,11 +197,7 @@ public class RegisterUserActivity extends FragmentActivity {
         }
         else if (currentFragment == 2)
         {
-            ImageView dot = (ImageView) findViewById(R.id.progress_dot2);
-            dot.setColorFilter(ContextCompat.getColor(this, R.color.primary_light), PorterDuff.Mode.SRC_IN);
-
-            dot = (ImageView) findViewById(R.id.progress_dot3);
-            dot.setColorFilter(ContextCompat.getColor(this, R.color.secondary_text), PorterDuff.Mode.SRC_IN);
+            switchProgressDotColor(R.id.progress_dot2, R.id.progress_dot3);
 
             Button btn = (Button) findViewById(R.id.progress_next);
             btn.setOnClickListener(new View.OnClickListener() {

@@ -16,12 +16,13 @@
     <dimen name="card_padding_top">16dp</dimen>
     <dimen name="card_padding_right">16dp</dimen>
     <dimen name="card_padding_left">8dp</dimen>
+    <dimen name="card_small_margin">4dp</dimen>
 
     <!-- Card titles -->
     <dimen name="card_title_size">24sp</dimen>
     <dimen name="card_title_margin_top">8dp</dimen>
     <dimen name="card_title_margin_left">8dp</dimen>
-    <dimen name="card_subtitle_size">14sp</dimen>
+    <dimen name="card_subtitle_size">16sp</dimen>
 
     <!-- Card icon button -->
     <dimen name="card_icon_button_size">36dp</dimen>

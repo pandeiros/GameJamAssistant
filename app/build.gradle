@@ -17,6 +17,20 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            'src/main/res/layouts/activities',
+                            'src/main/res/layouts/fragments',
+                            'src/main/res/layouts/includes',
+                            'src/main/res/layouts/misc',
+                            'src/main/res/layouts',
+                            'src/main/res'
+                    ]
+        }
+    }
 }
 
 dependencies {
@@ -31,3 +45,5 @@ dependencies {
 
     compile 'org.apmem.tools:layouts:1.10@aar'
 }
+
+

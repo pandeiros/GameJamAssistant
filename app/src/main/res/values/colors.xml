@@ -2,6 +2,7 @@
 <resources>
     <color name="primary">#2196F3</color>
     <color name="primary_dark">#1976D2</color>
+    <color name="primary_darker">#1060B0</color>
     <color name="primary_light">#BBDEFB</color>
     <color name="accent">#FFFF5722</color>
     <color name="accent_light">#FF8042</color>
@@ -24,6 +25,12 @@
     <color name="card_role_bg">#AAFFFFFF</color>
 
     <color name="success">#23ED32</color>
-    <!--<color name="tag_selected"></color>-->
+
+    <color name="progress_dot_normal">#B6B6B6</color>
+
+    <color name="card_profile_bg">#EEFFFFFF</color>
+
+    <color name="transparent_overlay_dark">#99000000</color>
+    <color name="transparent_overlay_light">#99FFFFFF</color>
 </resources>
 

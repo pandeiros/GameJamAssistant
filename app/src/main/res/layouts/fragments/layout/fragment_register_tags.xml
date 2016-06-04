@@ -14,8 +14,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="Tags"
-            android:textColor="@color/primary_text_light" />
+            android:text="Choose tags that you are familiar with."
+            android:layout_gravity="center"
+            android:textSize="16dp"
+            android:textColor="@color/secondary_text_light" />
 
         <org.apmem.tools.layouts.FlowLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/flow_layout_tags"

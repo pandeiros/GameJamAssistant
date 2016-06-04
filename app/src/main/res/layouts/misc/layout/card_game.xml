@@ -40,6 +40,8 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/card_title_size"
             android:layout_marginTop="@dimen/card_title_margin_top"
+            android:ellipsize="end"
+            android:maxLines="1"
             android:textColor="@color/primary_text_light"
             android:text="Title"/>
         <TextView
@@ -47,6 +49,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/card_subtitle_size"
+            android:ellipsize="end"
+            android:maxLines="1"
             android:textColor="@color/secondary_text_light"
             android:text="Subtitle"/>
 
