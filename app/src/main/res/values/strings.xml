@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">GameJamApp</string>
+
+    <string name="one">ONE</string>
+    <string name="str_tab_news">Home</string>
+    <string name="str_tab_games">Games</string>
+    <string name="str_tab_event">Event</string>
+    <string name="str_tab_profile">Profile</string>
+
+    <string name="hint_password">Password</string>
+    <string name="hint_password_repeat">Repeat password</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_code">Code</string>
+    <string name="hint_name">Name</string>
+
+    <string name="btn_register">REGISTER</string>
+    <string name="btn_login">LOGIN</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
