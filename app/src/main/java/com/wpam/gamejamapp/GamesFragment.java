@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.wpam.gamejamapp.db.DB;
+
 public class GamesFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
@@ -24,9 +26,16 @@ public class GamesFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         // specify an adapter
-        String arr[] = {"Rocket League", "Rocket League", "Rocket League", "Rocket League", "Rocket League",
-                "LOL2", "LOL2", "LOL2", "LOL2", "LOL2", "LOL2"};
-        mAdapter = new RecyclerViewAdapterGames(arr);
+//        Game arr[] = {
+//                new Game("Rocket League", new Team("Psyonix")),
+//                new Game("Grand Theft Auto", new Team("Rockstar Games")),
+//                new Game("Overwatch", new Team("Blizzard")),
+//                new Game("Assasins vs Pirates", new Team("Deadbit")),
+//                new Game("The Vanishing of Ethan Carter", new Team("The Astronauts"))
+//
+//        };
+
+        mAdapter = new RecyclerViewAdapterGames(DB.getInstance().getGamesAsArray());
     }
 
     @Override

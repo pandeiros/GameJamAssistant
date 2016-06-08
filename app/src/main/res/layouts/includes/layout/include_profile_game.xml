@@ -23,18 +23,23 @@
         <!--android:tint="@color/secondary_text" />-->
 
         <TextView
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
             android:text="Game"
             android:textAlignment="textStart"
             android:textColor="@color/secondary_text"
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/profile_game_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
             android:text="Super Mario Kart 2"
             android:textAlignment="textStart"
             android:textColor="@color/primary_text"

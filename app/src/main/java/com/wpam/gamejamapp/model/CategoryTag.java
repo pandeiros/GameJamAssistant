@@ -1,4 +1,6 @@
-package com.wpam.gamejamapp;
+package com.wpam.gamejamapp.model;
+
+import com.wpam.gamejamapp.R;
 
 public class CategoryTag {
     public enum Category {
@@ -8,7 +10,8 @@ public class CategoryTag {
         DESIGN(R.color.category_design),
         MOBILE(R.color.category_programming),
         STORY(R.color.category_programming),
-        WEB(R.color.category_programming);
+        WEB(R.color.category_programming),
+        ENGINE(R.color.category_graphics);
 
         private final int color;
 

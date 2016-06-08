@@ -10,6 +10,7 @@
 
     <!-- Card -->
     <dimen name="card_min_height">144dp</dimen>
+    <dimen name="card_game_min_height">112dp</dimen>
     <dimen name="card_corner_radius">2dp</dimen>
     <dimen name="card_margin">8dp</dimen>
     <dimen name="card_padding_bottom">8dp</dimen>

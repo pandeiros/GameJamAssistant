@@ -12,8 +12,10 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.wpam.gamejamapp.model.Role;
 
 
 /**
@@ -67,7 +69,7 @@ public class RegisterRoleFragment extends Fragment {
 
         for (int i = 0; i < roles.length; i++) {
 
-            GridLayout layout = (GridLayout) v.findViewById(R.id.grid_register_role);
+            LinearLayout layout = (LinearLayout) v.findViewById(R.id.grid_register_role);
             inflater.inflate(R.layout.card_register_role, layout);
 
 

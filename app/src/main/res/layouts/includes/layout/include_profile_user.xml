@@ -3,72 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <!--<RelativeLayout-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="232dp">-->
-
-
-    <!--<View-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:layout_alignParentBottom="true"-->
-    <!--android:id="@+id/background_profile_user"-->
-    <!--android:background="@color/primary" />-->
-
-    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-    <!--&lt;!&ndash;android:id="@+id/image_profile_user_back"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:scaleType="centerCrop"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:src="@drawable/rl" />&ndash;&gt;-->
-
-    <!--<LinearLayout-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_alignParentBottom="true"-->
-    <!--android:orientation="vertical"-->
-    <!--android:paddingBottom="16dp">-->
-
-    <!--<TextView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="Pandeiros"-->
-    <!--android:textAlignment="center"-->
-    <!--android:textColor="@color/primary_text"-->
-    <!--android:textSize="24sp" />-->
-
-    <!--<TextView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginTop="8dp"-->
-    <!--android:text="Programmer"-->
-    <!--android:textAlignment="center"-->
-    <!--android:textColor="@color/secondary_text"-->
-    <!--android:textSize="16sp" />-->
-    <!--</LinearLayout>-->
-
-    <!--<ImageView-->
-    <!--android:id="@+id/image_profile_user"-->
-    <!--android:layout_width="128dp"-->
-    <!--android:layout_height="128dp"-->
-    <!--android:layout_centerHorizontal="true"-->
-    <!--android:elevation="8dp"-->
-    <!--android:scaleType="centerCrop"-->
-    <!--android:layout_marginTop="8dp"-->
-    <!--android:src="@drawable/rl" />-->
-
-
-    <!--</RelativeLayout>-->
-
-
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_profile_user"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginBottom="@dimen/card_small_margin"
         android:layout_marginLeft="@dimen/card_small_margin"
         android:layout_marginRight="@dimen/card_small_margin"
         android:layout_marginTop="64dp"
-        android:id="@+id/card_profile_user"
         android:minHeight="@dimen/card_min_height"
         card_view:cardBackgroundColor="@color/card_profile_bg"
         card_view:cardCornerRadius="2dp">
@@ -87,6 +29,7 @@
                 android:tint="@color/secondary_text" />
 
             <TextView
+                android:id="@+id/profile_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="32dp"
@@ -96,13 +39,24 @@
                 android:textSize="24sp" />
 
             <TextView
+                android:id="@+id/profile_role"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Programmer"
+                android:fontFamily="monospace"
                 android:textAlignment="center"
                 android:textColor="@color/secondary_text"
                 android:textSize="16sp" />
+
+            <org.apmem.tools.layouts.FlowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/flow_layout_user_tags"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="4dp">
+
+            </org.apmem.tools.layouts.FlowLayout>
 
         </LinearLayout>
 
@@ -114,8 +68,8 @@
         android:layout_width="128dp"
         android:layout_height="128dp"
         android:layout_centerHorizontal="true"
-        android:elevation="4dp"
         android:layout_marginTop="8dp"
+        android:elevation="4dp"
         android:scaleType="centerCrop"
         android:src="@drawable/rl" />
 

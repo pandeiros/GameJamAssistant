@@ -1,5 +1,6 @@
 package com.wpam.gamejamapp;
 
+import android.content.Context;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -12,6 +13,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
+
+import com.wpam.gamejamapp.db.DB;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        DB.getInstance().refresh();
+
         setContentView(R.layout.activity_main);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -51,11 +59,28 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
         setupTabIcons();
+
+        LayoutInflater inflater = new LayoutInflater(this) {
+            @Override
+            public LayoutInflater cloneInContext(Context newContext) {
+                return null;
+            }
+        };
+
+        RelativeLayout bottom = (RelativeLayout) findViewById(R.id.layout_bottom_timeline);
+
+        final ProgressBar progressBar = (ProgressBar) bottom.findViewById(R.id.layout_bottom_progress_bar);
+
+        progressBar.post(new Runnable() {
+            @Override
+            public void run() {
+                progressBar.setProgress(60);
+            }
+        });
     }
 
     private void setupTabIcons() {
-        for (int i = 0; i < TAB_COUNT; ++i)
-        {
+        for (int i = 0; i < TAB_COUNT; ++i) {
             ImageView view = (ImageView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
             view.setImageResource(tabIcons[i]);
             if (i == 0)
@@ -82,9 +107,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                for (int i = 0; i < TAB_COUNT; ++i)
-                {
-                    ImageView view = (ImageView)tabLayout.getTabAt(i).getCustomView();
+                for (int i = 0; i < TAB_COUNT; ++i) {
+                    ImageView view = (ImageView) tabLayout.getTabAt(i).getCustomView();
                     if (i == position)
                         view.setColorFilter(ContextCompat.getColor(getApplicationContext(), R.color.icons), PorterDuff.Mode.SRC_IN);
                     else

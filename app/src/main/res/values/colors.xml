@@ -4,12 +4,14 @@
     <color name="primary_dark">#1976D2</color>
     <color name="primary_darker">#1060B0</color>
     <color name="primary_light">#BBDEFB</color>
+    <color name="primary_lighter">#F0F5FF</color>
     <color name="accent">#FFFF5722</color>
     <color name="accent_light">#FF8042</color>
     <color name="primary_text">#212121</color>
     <color name="secondary_text">#727272</color>
     <color name="icons">#FFFFFF</color>
     <color name="divider">#B6B6B6</color>
+    <!--<color name="secondary_background">#E</color>-->
 
     <color name="primary_text_light">#FFFFFF</color>
     <color name="secondary_text_light">#B5B5B5</color>
@@ -31,6 +33,7 @@
     <color name="card_profile_bg">#EEFFFFFF</color>
 
     <color name="transparent_overlay_dark">#99000000</color>
+    <color name="transparent_overlay_dark_semi">#66000000</color>
     <color name="transparent_overlay_light">#99FFFFFF</color>
 </resources>
 

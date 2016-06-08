@@ -29,8 +29,8 @@
 
         <ImageView
             android:id="@+id/summary_check"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
             android:layout_gravity="center"
             android:src="@drawable/ic_check_circle_black_48dp"
             android:tintMode="src_in"

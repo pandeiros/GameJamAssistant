@@ -13,6 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.wpam.gamejamapp.model.CategoryTag;
+
 import org.apmem.tools.layouts.FlowLayout;
 
 import java.util.Arrays;

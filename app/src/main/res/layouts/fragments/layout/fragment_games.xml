@@ -8,6 +8,9 @@
         android:id="@+id/recycler_view_games"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/recycler_padding"/>
+        android:paddingTop="@dimen/recycler_padding"
+        android:paddingBottom="32dp"
+        android:paddingRight="@dimen/recycler_padding"
+        android:paddingLeft="@dimen/recycler_padding" />
 
 </RelativeLayout>

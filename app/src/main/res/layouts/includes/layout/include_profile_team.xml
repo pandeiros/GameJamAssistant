@@ -10,6 +10,7 @@
     card_view:cardCornerRadius="2dp">
 
     <LinearLayout
+        android:id="@+id/layout_team"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -25,26 +26,33 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
             android:text="Team"
             android:textAlignment="textStart"
             android:textColor="@color/secondary_text"
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/team_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
             android:text="Super Ultra The Best Team Ever Forever Will Win"
             android:textAlignment="textStart"
             android:textColor="@color/primary_text"
             android:textSize="24sp" />
 
-        <include layout="@layout/include_profile_team_member" />
+        <LinearLayout
+            android:id="@+id/layout_team_members"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <include layout="@layout/include_profile_team_member" />
+        </LinearLayout>
 
-        <include layout="@layout/include_profile_team_member" />
     </LinearLayout>
 
 

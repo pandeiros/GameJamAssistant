@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_bottom_timeline"
+    android:layout_width="match_parent"
+    android:layout_height="32dp"
+
+    android:layout_gravity="bottom"
+    android:background="@color/primary_light"
+    android:elevation="8dp"
+    android:visibility="visible">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:text="12:00"
+        android:textAlignment="center"
+        android:textColor="@color/secondary_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLength="30"
+        android:text="Barbeque" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:text="13:00"
+        android:textColor="@color/secondary_text" />
+
+    <include layout="@layout/include_bottom_progress_bar" />
+
+    <!--<ProgressBar-->
+        <!--android:id="@+id/progressBar"-->
+        <!--style="?android:attr/progressBarStyleHorizontal"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginBottom="88dp"-->
+        <!--android:max="100"-->
+        <!--android:minHeight="50dp"-->
+        <!--android:minWidth="200dp"-->
+        <!--android:progressTint="@color/accent"-->
+        <!--android:progress="30"-->
+        <!--android:indeterminate="false"/>-->
+
+    <!--<View-->
+    <!--android:id="@+id/timeline_progress_bar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="4dp"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:background="@color/accent" />-->
+
+</RelativeLayout>
